@@ -100,7 +100,7 @@ Operating system defines, see http://sourceforge.net/p/predef/wiki/OperatingSyst
 #define PX_ANDROID 1
 #elif defined(__linux__) || defined (__EMSCRIPTEN__) // note: __ANDROID__ implies __linux__
 #define PX_LINUX 1
-#elif defined(__APPLE__) && (defined(__arm__) || defined(__arm64__))
+#elif defined(TARGET_OS_IOS) && TARGET_OS_IOS && defined(__APPLE__) && (defined(__arm__) || defined(__arm64__))
 #define PX_IOS 1
 #elif defined(__APPLE__)
 #define PX_OSX 1
